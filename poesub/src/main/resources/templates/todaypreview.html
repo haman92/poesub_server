@@ -1,0 +1,456 @@
+
+<!DOCTYPE html>
+<html lang="en"  xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<script data-ad-client="ca-pub-2818057204957244" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>PoeSub</title>
+
+<!-- Bootstrap core CSS -->
+<link th:href="@{vendor/bootstrap/css/bootstrap.min.css}"
+	rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link th:href="@{css/simple-sidebar.css}" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+		<!-- Sidebar -->
+		<div class="bg-light border-right" id="sidebar-wrapper" >
+			<div class="sidebar-heading">POE SUB</div>
+			<div class="list-group list-group-flush">
+				<a th:href="@{/}"
+					class="list-group-item list-group-item-action list-group-item-primary">Home</a> <a
+					th:href="@{todaypreview}"
+					class="list-group-item list-group-item-action list-group-item-dark">today
+					preview</a> <a th:href="@{ascendancy}"
+					class="list-group-item list-group-item-action list-group-item-primary">Ascendancy</a>
+				<a th:href="@{chart}"
+					class="list-group-item list-group-item-action list-group-item-dark">Labyrinth
+					chart</a>
+
+			</div>
+		</div>
+		<!-- /#sidebar-wrapper -->	
+		
+		
+		<!-- Page Content -->
+		<div id="page-content-wrapper" style="width:50%">
+
+			<!-- /# container fluid -->
+			<div class="container-fluid" >
+			
+				<h1 class="mt-4">TOP 3 ACTIVE SKILLS</h1>
+				<!-- / 통계 테이블  th:src="@{resources/images/Ascendant_avatar.png}    -->
+				<img class="img-thumbnail" src="http://d2ecpndlzn8jgd.cloudfront.net/Ascendant_avatar.png" alt="Ascendant" />
+				<table class="table table-striped table-dark">
+					
+					<thead>
+						<tr>
+							<th scope="col" style="width:10%">rank</th>
+							
+							<th scope="col" style="width:60%">Active gems</th>
+							<th scope="col" style="width:30%">count</th>
+						</tr>
+					</thead>
+					<tbody>
+						 <tr th:each="data : ${asc}">
+				         <td th:text="${data.num}">rank</td>    
+				         <td th:text="${data.gemname}">Active gems</td>
+				         <td th:text="${data.gemcount}">count</td> 
+					</tbody>
+				</table>
+				
+				
+				
+				<img class="img-thumbnail" src="http://d2ecpndlzn8jgd.cloudfront.net/Berserker_avatar.png" alt="Berserker" />
+				<table class="table table-striped table-dark">
+					
+					<thead>
+						<tr>
+							<th scope="col" style="width:10%">rank</th>
+							
+							<th scope="col" style="width:60%">Active gems</th>
+							<th scope="col" style="width:30%">count</th>
+						</tr>
+					</thead>
+					<tbody>
+						 <tr th:each="data : ${ber}">
+				         <td th:text="${data.num}">rank</td>    
+				         <td th:text="${data.gemname}">Active gems</td>
+				         <td th:text="${data.gemcount}">count</td> 
+					</tbody>
+				</table>
+				
+				
+				
+				<img class="img-thumbnail" src="http://d2ecpndlzn8jgd.cloudfront.net/Chieftain_avatar.png" alt="Chieftain" />
+				<table class="table table-striped table-dark">
+					
+					<thead>
+						<tr>
+							<th scope="col" style="width:10%">rank</th>
+							
+							<th scope="col" style="width:60%">Active gems</th>
+							<th scope="col" style="width:30%">count</th>
+						</tr>
+					</thead>
+					<tbody>
+						 <tr th:each="data : ${chi}">
+				         <td th:text="${data.num}">rank</td>    
+				         <td th:text="${data.gemname}">Active gems</td>
+				         <td th:text="${data.gemcount}">count</td> 
+					</tbody>
+				</table>
+				
+				
+				
+				<img class="img-thumbnail" src="http://d2ecpndlzn8jgd.cloudfront.net/Elementalist_avatar.png" alt="Elementalist" />
+				<table class="table table-striped table-dark">
+					
+					<thead>
+						<tr>
+							<th scope="col" style="width:10%">rank</th>
+							
+							<th scope="col" style="width:60%">Active gems</th>
+							<th scope="col" style="width:30%">count</th>
+						</tr>
+					</thead>
+					<tbody>
+						 <tr th:each="data : ${ele}">
+				         <td th:text="${data.num}">rank</td>    
+				         <td th:text="${data.gemname}">Active gems</td>
+				         <td th:text="${data.gemcount}">count</td> 
+					</tbody>
+				</table>
+				
+				
+				
+				<img class="img-thumbnail" src="http://d2ecpndlzn8jgd.cloudfront.net/Guardian_avatar.png" alt="Guardian" />
+				<table class="table table-striped table-dark">
+					
+					<thead>
+						<tr>
+							<th scope="col" style="width:10%">rank</th>
+							
+							<th scope="col" style="width:60%">Active gems</th>
+							<th scope="col" style="width:30%">count</th>
+						</tr>
+					</thead>
+					<tbody>
+						 <tr th:each="data : ${gua}">
+				         <td th:text="${data.num}">rank</td>    
+				         <td th:text="${data.gemname}">Active gems</td>
+				         <td th:text="${data.gemcount}">count</td> 
+					</tbody>
+				</table>
+				
+				
+				
+				<img class="img-thumbnail" src="http://d2ecpndlzn8jgd.cloudfront.net/Inquisitor_avatar.png" alt="Inquisitor" />
+				<table class="table table-striped table-dark">
+					
+					<thead>
+						<tr>
+							<th scope="col" style="width:10%">rank</th>
+							
+							<th scope="col" style="width:60%">Active gems</th>
+							<th scope="col" style="width:30%">count</th>
+						</tr>
+					</thead>
+					<tbody>
+						 <tr th:each="data : ${inq}">
+				         <td th:text="${data.num}">rank</td>    
+				         <td th:text="${data.gemname}">Active gems</td>
+				         <td th:text="${data.gemcount}">count</td> 
+					</tbody>
+				</table>
+				
+				
+				
+				<img class="img-thumbnail" src="http://d2ecpndlzn8jgd.cloudfront.net/Necromancer_avatar.png" alt="Necromancer" />
+				<table class="table table-striped table-dark">
+					
+					<thead>
+						<tr>
+							<th scope="col" style="width:10%">rank</th>
+							
+							<th scope="col" style="width:60%">Active gems</th>
+							<th scope="col" style="width:30%">count</th>
+						</tr>
+					</thead>
+					<tbody>
+						 <tr th:each="data : ${nec}">
+				         <td th:text="${data.num}">rank</td>    
+				         <td th:text="${data.gemname}">Active gems</td>
+				         <td th:text="${data.gemcount}">count</td> 
+					</tbody>
+				</table>
+				
+				
+				<img class="img-thumbnail" src="http://d2ecpndlzn8jgd.cloudfront.net/Pathfinder_avatar.png" alt="Pathfinder" />
+				<table class="table table-striped table-dark">
+					
+					<thead>
+						<tr>
+							<th scope="col" style="width:10%">rank</th>
+							
+							<th scope="col" style="width:60%">Active gems</th>
+							<th scope="col" style="width:30%">count</th>
+						</tr>
+					</thead>
+					<tbody>
+						 <tr th:each="data : ${pat}">
+				         <td th:text="${data.num}">rank</td>    
+				         <td th:text="${data.gemname}">Active gems</td>
+				         <td th:text="${data.gemcount}">count</td> 
+					</tbody>
+				</table>
+				
+				
+				
+				<img class="img-thumbnail" src="http://d2ecpndlzn8jgd.cloudfront.net/Saboteur_avatar.png" alt="Saboteur" />
+				<table class="table table-striped table-dark">
+					
+					<thead>
+						<tr>
+							<th scope="col" style="width:10%">rank</th>
+							
+							<th scope="col" style="width:60%">Active gems</th>
+							<th scope="col" style="width:30%">count</th>
+						</tr>
+					</thead>
+					<tbody>
+						 <tr th:each="data : ${sab}">
+				         <td th:text="${data.num}">rank</td>    
+				         <td th:text="${data.gemname}">Active gems</td>
+				         <td th:text="${data.gemcount}">count</td> 
+					</tbody>
+				</table>
+				
+				
+				
+				<img class="img-thumbnail" src="http://d2ecpndlzn8jgd.cloudfront.net/Trickster_avatar.png" alt="Trickster" />
+				<table class="table table-striped table-dark">
+					
+					<thead>
+						<tr>
+							<th scope="col" style="width:10%">rank</th>
+							
+							<th scope="col" style="width:60%">Active gems</th>
+							<th scope="col" style="width:30%">count</th>
+						</tr>
+					</thead>
+					<tbody>
+						 <tr th:each="data : ${tri}">
+				         <td th:text="${data.num}">rank</td>    
+				         <td th:text="${data.gemname}">Active gems</td>
+				         <td th:text="${data.gemcount}">count</td> 
+					</tbody>
+				</table>
+				
+
+			</div>
+		</div>
+		
+		<div id="page-content-wrapper" style="width:50%">
+
+			<h1 class="mt-4">BY ASCENDANCY</h1>
+			<!-- /# container fluid -->
+			<div class="container-fluid" >
+			<img class="img-thumbnail" src="http://d2ecpndlzn8jgd.cloudfront.net/Assassin_avatar.png" alt="Assassin" />
+				<table class="table table-striped table-dark">
+					
+					<thead>
+						<tr>
+							<th scope="col" style="width:10%">rank</th>
+							
+							<th scope="col" style="width:60%">Active gems</th>
+							<th scope="col" style="width:30%">count</th>
+						</tr>
+					</thead>
+					<tbody>
+						 <tr th:each="data : ${ass}">
+				         <td th:text="${data.num}">rank</td>    
+				         <td th:text="${data.gemname}">Active gems</td>
+				         <td th:text="${data.gemcount}">count</td> 
+					</tbody>
+				</table>
+				<img class="img-thumbnail" src="http://d2ecpndlzn8jgd.cloudfront.net/Champion_avatar.png" alt="Champion" />
+				<table class="table table-striped table-dark">
+					
+					<thead>
+						<tr>
+							<th scope="col" style="width:10%">rank</th>
+							
+							<th scope="col" style="width:60%">Active gems</th>
+							<th scope="col" style="width:30%">count</th>
+						</tr>
+					</thead>
+					<tbody>
+						 <tr th:each="data : ${cha}">
+				         <td th:text="${data.num}">rank</td>    
+				         <td th:text="${data.gemname}">Active gems</td>
+				         <td th:text="${data.gemcount}">count</td> 
+					</tbody>
+				</table>
+				<img class="img-thumbnail" src="http://d2ecpndlzn8jgd.cloudfront.net/Deadeye_avatar.png" alt="Deadeye" />
+				<table class="table table-striped table-dark">
+					
+					<thead>
+						<tr>
+							<th scope="col" style="width:10%">rank</th>
+							
+							<th scope="col" style="width:60%">Active gems</th>
+							<th scope="col" style="width:30%">count</th>
+						</tr>
+					</thead>
+					<tbody>
+						 <tr th:each="data : ${dea}">
+				         <td th:text="${data.num}">rank</td>    
+				         <td th:text="${data.gemname}">Active gems</td>
+				         <td th:text="${data.gemcount}">count</td> 
+					</tbody>
+				</table>
+				<img class="img-thumbnail" src="http://d2ecpndlzn8jgd.cloudfront.net/Gladiator_avatar.png" alt="Gladiator" />
+				<table class="table table-striped table-dark">
+					
+					<thead>
+						<tr>
+							<th scope="col" style="width:10%">rank</th>
+							
+							<th scope="col" style="width:60%">Active gems</th>
+							<th scope="col" style="width:30%">count</th>
+						</tr>
+					</thead>
+					<tbody>
+						 <tr th:each="data : ${gla}">
+				         <td th:text="${data.num}">rank</td>    
+				         <td th:text="${data.gemname}">Active gems</td>
+				         <td th:text="${data.gemcount}">count</td> 
+					</tbody>
+				</table>
+				<img class="img-thumbnail" src="http://d2ecpndlzn8jgd.cloudfront.net/Hierophant_avatar.png" alt="Hierophant" />
+				<table class="table table-striped table-dark">
+					
+					<thead>
+						<tr>
+							<th scope="col" style="width:10%">rank</th>
+							
+							<th scope="col" style="width:60%">Active gems</th>
+							<th scope="col" style="width:30%">count</th>
+						</tr>
+					</thead>
+					<tbody>
+						 <tr th:each="data : ${hie}">
+				         <td th:text="${data.num}">rank</td>    
+				         <td th:text="${data.gemname}">Active gems</td>
+				         <td th:text="${data.gemcount}">count</td> 
+					</tbody>
+				</table>
+				<img class="img-thumbnail" src="http://d2ecpndlzn8jgd.cloudfront.net/Juggernaut_avatar.png" alt="Juggernaut" />
+				<table class="table table-striped table-dark">
+					
+					<thead>
+						<tr>
+							<th scope="col" style="width:10%">rank</th>
+							
+							<th scope="col" style="width:60%">Active gems</th>
+							<th scope="col" style="width:30%">count</th>
+						</tr>
+					</thead>
+					<tbody>
+						 <tr th:each="data : ${jug}">
+				         <td th:text="${data.num}">rank</td>    
+				         <td th:text="${data.gemname}">Active gems</td>
+				         <td th:text="${data.gemcount}">count</td> 
+					</tbody>
+				</table>
+				<img class="img-thumbnail" src="http://d2ecpndlzn8jgd.cloudfront.net/Occultist_avatar.png" alt="Occultist" />
+				<table class="table table-striped table-dark">
+					
+					<thead>
+						<tr>
+							<th scope="col" style="width:10%">rank</th>
+							
+							<th scope="col" style="width:60%">Active gems</th>
+							<th scope="col" style="width:30%">count</th>
+						</tr>
+					</thead>
+					<tbody>
+						 <tr th:each="data : ${occ}">
+				         <td th:text="${data.num}">rank</td>    
+				         <td th:text="${data.gemname}">Active gems</td>
+				         <td th:text="${data.gemcount}">count</td> 
+					</tbody>
+				</table>
+				<img class="img-thumbnail" src="http://d2ecpndlzn8jgd.cloudfront.net/Raider_avatar.png" alt="Raider" />
+				<table class="table table-striped table-dark">
+					
+					<thead>
+						<tr>
+							<th scope="col" style="width:10%">rank</th>
+							
+							<th scope="col" style="width:60%">Active gems</th>
+							<th scope="col" style="width:30%">count</th>
+						</tr>
+					</thead>
+					<tbody>
+						 <tr th:each="data : ${rai}">
+				         <td th:text="${data.num}">rank</td>    
+				         <td th:text="${data.gemname}">Active gems</td>
+				         <td th:text="${data.gemcount}">count</td> 
+					</tbody>
+				</table>
+				<img class="img-thumbnail" src="http://d2ecpndlzn8jgd.cloudfront.net/Slayer_avatar.png" alt="Slayer" />
+				<table class="table table-striped table-dark">
+					
+					<thead>
+						<tr>
+							<th scope="col" style="width:10%">rank</th>
+							
+							<th scope="col" style="width:60%">Active gems</th>
+							<th scope="col" style="width:30%">count</th>
+						</tr>
+					</thead>
+					<tbody>
+						 <tr th:each="data : ${sla}">
+				         <td th:text="${data.num}">rank</td>    
+				         <td th:text="${data.gemname}">Active gems</td>
+				         <td th:text="${data.gemcount}">count</td> 
+					</tbody>
+				</table>
+				<button id="topbutton" type="button" class="btn btn-primary" th:onclick="topFunction()">Top</button>
+			</div>
+		</div>
+
+		<!-- /#page-content-wrapper-->
+
+	</div>
+	<!-- /#wrapper -->
+					<script th:inline="javascript">
+
+								function topFunction() {
+							       document.body.scrollTop = 0; // For Safari
+							       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+							     }
+							     </script>
+	<!-- Bootstrap core JavaScript -->
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

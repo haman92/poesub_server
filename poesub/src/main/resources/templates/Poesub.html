@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en"  xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<script data-ad-client="ca-pub-2818057204957244" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>PoeSub</title>
+
+<!-- Bootstrap core CSS -->
+<link th:href="@{vendor/bootstrap/css/bootstrap.min.css}"
+	rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link th:href="@{css/simple-sidebar.css}" rel="stylesheet">
+
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+
+
+</head>
+
+<body>
+
+	<div class="d-flex" id="wrapper">
+		<!-- Sidebar -->
+
+		<div class="bg-light border-right" id="sidebar-wrapper">
+			<div class="sidebar-heading">POE SUB</div>
+			<div class="list-group list-group-flush">
+				<a th:href="@{/}"
+					class="list-group-item list-group-item-action list-group-item-primary">Home</a> <a
+					th:href="@{todaypreview}"
+					class="list-group-item list-group-item-action list-group-item-dark">today
+					preview</a> <a th:href="@{ascendancy}"
+					class="list-group-item list-group-item-action list-group-item-primary">Ascendancy</a>
+				<a th:href="@{chart}"
+					class="list-group-item list-group-item-action list-group-item-dark">Labyrinth
+					chart</a>
+
+			</div>
+		</div>
+		<!-- /#sidebar-wrapper -->
+
+
+		<!-- Page Content -->
+		<div id="page-content-wrapper" style="width: 60%">
+			<!-- /# container fluid -->
+			<div class="container-fluid">
+			<h1>아래 내용을 읽어주세요</h1>		
+			<p>닌자는 랭커 15000명으로만 데이터를 집계해서 부캐를 키우는 정보를 수집하기에는 조금 부족하기에 만들었습니다. 부캐를 키우는 것에 데이터를 수집하기 위해서 데이터는 CRUEL(잔혹) 라비린스를 클리어한 데이터를 기준으로 합니다.예를 들어 1/20 09시 ~ 1/21 9시에 완료한 캐릭터들을 9시부터 데이터를 수집한 뒤 데이터를 보여줍니다. 그렇기에 바로 갱신되지않고 딜레이가 있을 수 있습니다.</p>
+			<p> 부캐를 키울때 크루얼 라비린스는 한번은 거쳐가지만 다시는 잘 안하기 때문입니다. 그리고 무자비나 영원자보다 데이터수가 적기때문에 선택했습니다. 프로필 비공개한 사람들은 젬을 체크할 수 없고 공개한 사람만 체크하고 있습니다. 전체 인원대비 프로필 공개한 사람의 비율은 대략 66%정도 됩니다.</p>
+			<p>링크는 아이템 어픽스에 있는것들을 빼고 순수하게 장착된 젬들만 체크하였습니다. 4링크이상을 기준으로 하였기 때문에 한캐릭터당 여러개의 스킬젬이 나올수 있습니다. 1개의 스킬에 3개의 서폿젬이 있어야 체크가 되기 때문에 6링크에 3개의 액티브 3개의 서폿젬이 장착되어있어도 다 체크가 됩니다. 네크로맨서의 경우 좀비는 거의 모든 빌드에서 사용되기 때문에 많이 집계되는 것 같습니다.</p>
+			<h2>페이지 설명</h2>
+			<p>todaypreview 는 제일 최근 라비린스 데이터 수집한 날짜에서 어센던시별 가장 많이 쓰인 액티브젬 3개를 보여줍니다.</p>
+			<p>Chart는 2주간 라비린스 클리어한 총 인원 그래프와 어센던시별 데이터를 나타낸 그래프로 구성되어있습니다.</p>
+			<p>Ascendancy는 1주동안 각 어센던시의 액티브 스킬을 통계내서 보여줍니다. 그리고 액티브 젬 이름들이 나와있는 칸을 클릭하면 위의 버튼들이 액티브 젬의 이름으로 변하게됩니다.
+			그때 클릭을 하면 각각에 맞는 유투브 링크나 닌자 링크로 이동하게 됩니다. 아무것도 선택을 하지 않았을경우 어떠한 링크로도 가지 않습니다.</p>
+			<p>high impact mine은 데이터를 잘못수집했고 수정했는데 abyss jewel 나오는 것은 아직 체크를 못해서 한번씩 뜰 수 있습니다. </p>
+			<h1>참고사항</h1>
+			<p> PC 환경만 고려하여 개발하였고 작은화면은 깨지니까 최대화면으로 창크기를 키워서 실행해주세요.  </p>
+			<a th:href="@{record}" id="record" type="button" class="btn btn-primary" >POESUB 사용하는 Youtube영상</a>
+			<p></p>
+			
+			아무것도 안보이는 모바일을 위한 버튼
+			<p></p> 
+			모바일에서는 todaypreview를 제외한 다른페이지를 보기 힘듬
+			<p></p>
+			<a th:href="@{todaypreview}" type = "button" class="btn btn-primary" >today preview</a>
+				
+
+			</div>
+
+		</div>
+
+		<!-- /#page-content-wrapper -->
+
+	</div>
+	<!-- /#wrapper -->
+ 					
+
+					
+	<!-- Bootstrap core JavaScript -->
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
+
+

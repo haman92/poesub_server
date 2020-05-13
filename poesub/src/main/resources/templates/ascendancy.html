@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en"  xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<script data-ad-client="ca-pub-2818057204957244" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>PoeSub</title>
+
+<!-- Bootstrap core CSS -->
+<link th:href="@{vendor/bootstrap/css/bootstrap.min.css}"
+	rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link th:href="@{css/simple-sidebar.css}" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+	<div class="d-flex" id="wrapper">
+		<!-- Sidebar -->
+		<div class="bg-light border-right" id="sidebar-wrapper">
+			<div class="sidebar-heading">POE SUB</div>
+			<div class="list-group list-group-flush">
+				<div class="list-group list-group-flush">
+				<a th:href="@{/}"
+					class="list-group-item list-group-item-action list-group-item-primary">Home</a> <a
+					th:href="@{todaypreview}"
+					class="list-group-item list-group-item-action list-group-item-dark">today
+					preview</a> <a th:href="@{ascendancy}"
+					class="list-group-item list-group-item-action list-group-item-primary">Ascendancy</a>
+				<a th:href="@{chart}"
+					class="list-group-item list-group-item-action list-group-item-dark">Labyrinth
+					chart</a>
+
+			</div>
+
+			</div>
+		</div>
+		<!-- /#sidebar-wrapper -->
+
+
+		<!-- Page Content -->
+		<div id="page-content-wrapper" style="width: 60%">
+
+
+				<nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+				 
+				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+				    <ul class="navbar-nav mr-auto">
+				      
+				      <li class="nav-item dropdown">
+				        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				          Select Class
+				        </a>
+				        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				          <a class="dropdown-item" th:href="@{/ascendancy/Ascendant}">Ascendant</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" th:href="@{#}">==SHADOW==</a> 
+						<a class="dropdown-item" th:href="@{/ascendancy/Assasin}">Assasin</a> <a
+							class="dropdown-item" th:href="@{/ascendancy/Saboteur}">Saboteur</a> <a
+							class="dropdown-item" th:href="@{/ascendancy/Trickster}">Trickster</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" th:href="@{#}">==WITCH==</a> 
+						<a class="dropdown-item" th:href="@{/ascendancy/Elementalist}">Elementalist</a> <a
+							class="dropdown-item" th:href="@{/ascendancy/Necromancer}">Necromancer</a> <a
+							class="dropdown-item" th:href="@{/ascendancy/Occultist}">Occultist</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" th:href="@{#}">==RANGER==</a> 
+						
+						<a class="dropdown-item" th:href="@{/ascendancy/Deadeye}">Deadeye</a> <a
+							class="dropdown-item" th:href="@{/ascendancy/Pathfinder}">Pathfinder</a> <a
+							class="dropdown-item" th:href="@{/ascendancy/Raider}">Raider</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" th:href="@{#}">==DUELIST==</a>
+						<a class="dropdown-item" th:href="@{/ascendancy/Gladiator}">Gladiator</a> <a
+							class="dropdown-item" th:href="@{/ascendancy/Champion}">Champion</a> <a
+							class="dropdown-item" th:href="@{/ascendancy/Slayer}">Slayer</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">==TEMPLAR==</a>
+						<a class="dropdown-item" th:href="@{/ascendancy/Guardian}">Guardian</a> <a
+							class="dropdown-item" th:href="@{/ascendancy/Hierophant}">Hierophant</a> <a
+							class="dropdown-item" th:href="@{/ascendancy/Inquisitor}">Inquisitor</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" th:href="@{#}">==MARAUDER==</a>
+						<a class="dropdown-item" th:href="@{/ascendancy/Juggernaut}">Juggernaut</a> <a
+							class="dropdown-item" th:href="@{/ascendancy/Berserker}">Berserker</a> <a
+							class="dropdown-item" th:href="@{/ascendancy/Chieftain}">Chieftain</a>
+						<div class="dropdown-divider"></div>
+				        </div>
+				      </li>
+				      
+				    </ul>
+				    
+				  </div>
+				</nav>
+
+			<!-- /# container fluid -->
+			<div class="container-fluid">
+
+			<!-- /# container fluid -->
+			<div class="container-fluid">
+					
+					
+					
+			
+				
+				
+				
+
+			</div>
+		</div>
+
+		<!-- /#page-content-wrapper -->
+
+	</div>
+	</div>
+	<!-- /#wrapper -->
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

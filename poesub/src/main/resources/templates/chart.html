@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html lang="en"  xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<script data-ad-client="ca-pub-2818057204957244" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>PoeSub</title>
+
+<!-- Bootstrap core CSS -->
+<link th:href="@{vendor/bootstrap/css/bootstrap.min.css}"
+	rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link th:href="@{css/simple-sidebar.css}" rel="stylesheet">
+
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+
+
+
+</head>
+
+<body>
+
+	<div class="d-flex" id="wrapper">
+		<!-- Sidebar -->
+		<div class="bg-light border-right" id="sidebar-wrapper">
+			<div class="sidebar-heading">POE SUB</div>
+			<div class="list-group list-group-flush">
+				<a th:href="@{/}"
+					class="list-group-item list-group-item-action list-group-item-primary">Home</a> <a
+					th:href="@{todaypreview}"
+					class="list-group-item list-group-item-action list-group-item-dark">today
+					preview</a> <a th:href="@{ascendancy}"
+					class="list-group-item list-group-item-action list-group-item-primary">Ascendancy</a>
+				<a th:href="@{chart}"
+					class="list-group-item list-group-item-action list-group-item-dark">Labyrinth
+					chart</a>
+
+			</div>
+		</div>
+		<!-- /#sidebar-wrapper -->
+
+
+		<!-- Page Content -->
+		<div id="page-content-wrapper" style="width:100%">
+
+
+
+
+			<!-- /# container fluid -->
+			<div class="container-fluid">
+
+				<!-- /# labyrinth chart -->
+
+        		<h1 class="mt-4">CRUEL LABYRINTH CHART</h1>
+				<canvas id="myChart"></canvas>
+				<script th:inline="javascript">
+					var ctx = document.getElementById('myChart').getContext(
+							'2d');
+					var chart = new Chart(ctx, {
+						type : 'line',
+						data : {
+							labels : 
+								[[${date}]],
+							datasets : 
+								[ 
+								{
+								label: 'TOTAL',
+								backgroundColor: 'rgb(252, 171, 0)',
+								borderColor: 'Black',
+								data : [[${total}]]
+								} 
+								]
+						},
+						options : {}
+					});
+				</script>
+				
+				<h1 class="mt-4">CRUEL LABYRINTH CHART - ASCENDANCY</h1>
+				<!-- /# ascendancy chart -->
+				<canvas id="myChart1"></canvas>
+				<script th:inline="javascript">
+					var ctx1 = document.getElementById('myChart1').getContext(
+							'2d');
+					var chart1 = new Chart(ctx1, {
+						type : 'line',
+						data : {
+							labels : 
+								[[${date}]],
+								datasets: [
+								{
+									label: 'Ascendant',
+									backgroundColor: 'DarkRed',
+									borderColor: 'DarkRed',
+									data: [[${asc}]],
+									fill: false
+								},
+								{
+									label: 'Assasin',
+									backgroundColor: 'BlueViolet',
+									borderColor: 'BlueViolet',
+									data: [[${ass}]],
+									fill: false
+								},
+								{
+									label: 'Berserker',
+									backgroundColor: 'Black',
+									borderColor: 'Black',
+									data: [[${ber}]],
+									fill: false
+								},
+								{
+									label: 'Champion',
+									backgroundColor: 'Blue',
+									borderColor: 'Blue',
+									data: [[${cha}]],
+									fill: false
+								},
+								{
+									label: 'Chieftain',
+									backgroundColor: 'BurlyWood',
+									borderColor: 'BurlyWood',
+									data: [[${chi}]],
+									fill: false
+								},
+								{
+									label: 'Deadeye',
+									backgroundColor: 'RoyalBlue',
+									borderColor: 'RoyalBlue',
+									data: [[${dea}]],
+									fill: false
+								},
+								{
+									label: 'Elementalist',
+									backgroundColor: 'DarkGrey',
+									borderColor: 'DarkGrey',
+									data: [[${ele}]],
+									fill: false
+								},
+								{
+									label: 'Gladiator',
+									backgroundColor: 'DarkGreen',
+									borderColor: 'DarkGreen',
+									data: [[${gla}]],
+									fill: false
+								},
+								{
+									label: 'Guardian',
+									backgroundColor: 'GoldenRod',
+									borderColor: 'GoldenRod',
+									data: [[${gua}]],
+									fill: false
+								},
+								{
+									label: 'Hierophant',
+									backgroundColor: 'DarkOrange',
+									borderColor: 'DarkOrange',
+									data: [[${hie}]],
+									fill: false
+								},
+								{
+									label: 'Inquisitor',
+									backgroundColor: 'Indigo',
+									borderColor: 'Indigo',
+									data: [[${inq}]],
+									fill: false
+								},
+								{
+									label: 'Juggernaut',
+									backgroundColor: 'LightCoral',
+									borderColor: 'LightCoral',
+									data: [[${jug}]],
+									fill: false
+								},
+								{
+									label: 'Necromancer',
+									backgroundColor: 'PowderBlue',
+									borderColor: 'PowderBlue',
+									data: [[${nec}]],
+									fill: false
+								},
+								{
+									label: 'Occultist',
+									backgroundColor: 'Yellow',
+									borderColor: 'Yellow',
+									data: [[${occ}]],
+									fill: false
+								},
+								{
+									label: 'Pathfinder',
+									backgroundColor: 'Sienna',
+									borderColor: 'Sienna',
+									data: [[${pat}]],
+									fill: false
+								},
+								{
+									label: 'Raider',
+									backgroundColor: 'YellowGreen',
+									borderColor: 'YellowGreen',
+									data: [[${rai}]],
+									fill: false
+								},
+								{
+									label: 'Saboteur',
+									backgroundColor: 'Tomato',
+									borderColor: 'Tomato',
+									data: [[${sab}]],
+									fill: false
+								},
+								{
+									label: 'Slayer',
+									backgroundColor: 'Orchid',
+									borderColor: 'Orchid',
+									data: [[${sla}]],
+									fill: false
+								},
+								{
+									label: 'Trickster',
+									backgroundColor: 'Lime',
+									borderColor: 'Lime',
+									data: [[${tri}]],
+									fill: false
+								},]
+						},
+						options : {}
+					});
+				</script>
+
+
+			</div>
+
+		</div>
+
+		<!-- /#page-content-wrapper -->
+
+	</div>
+	<!-- /#wrapper -->
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
+
+

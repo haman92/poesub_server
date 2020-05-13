@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring.poesub.db.PreviewDataMapper">
+
+	<select id="selecttest" resultType="int">
+		select total from
+		labyrinthladder LIMIT 1;
+	</select>
+
+	<select id="previewselectasc"
+		resultType="com.spring.poesub.model.PREAscendancy_Gem">
+
+			select row_number() over (order by gemcount desc) as num,
+			gemname, gemcount
+			from ascendancy_activegem_count_asc
+			where
+			labyrinthladderdate = (select labyrinthladderdate
+			from labyrinthladder
+			order by labyrinthladderdate desc
+			limit 1)
+			Limit 3;
+	</select>
+
+
+	<select id="previewselectass"
+		resultType="com.spring.poesub.model.PREAscendancy_Gem">
+			select row_number() over (order by gemcount desc) as num,
+			gemname, gemcount
+			from ascendancy_activegem_count_ass
+			where
+			labyrinthladderdate = (select labyrinthladderdate
+			from labyrinthladder
+			order by labyrinthladderdate desc
+			limit 1)
+			Limit 3;
+	</select>
+
+
+	<select id="previewselectber"
+		resultType="com.spring.poesub.model.PREAscendancy_Gem">
+			select row_number() over (order by gemcount desc) as num,
+			gemname, gemcount
+			from ascendancy_activegem_count_ber
+			where
+			labyrinthladderdate = (select labyrinthladderdate
+			from labyrinthladder
+			order by labyrinthladderdate desc
+			limit 1)
+			Limit 3;
+	</select>
+
+	<select id="previewselectcha"
+		resultType="com.spring.poesub.model.PREAscendancy_Gem">
+
+			select row_number() over (order by gemcount desc) as num,
+			gemname, gemcount
+			from ascendancy_activegem_count_cha
+			where
+			labyrinthladderdate = (select labyrinthladderdate
+			from labyrinthladder
+			order by labyrinthladderdate desc
+			limit 1)
+			Limit 3;
+	</select>
+
+	<select id="previewselectchi"
+		resultType="com.spring.poesub.model.PREAscendancy_Gem">
+			select row_number() over (order by gemcount desc) as num,
+			gemname, gemcount
+			from ascendancy_activegem_count_chi
+			where
+			labyrinthladderdate = (select labyrinthladderdate
+			from labyrinthladder
+			order by labyrinthladderdate desc
+			limit 1)
+			Limit 3;
+	</select>
+
+	<select id="previewselectdea"
+		resultType="com.spring.poesub.model.PREAscendancy_Gem">
+			select row_number() over (order by gemcount desc) as num,
+			gemname, gemcount
+			from ascendancy_activegem_count_dea
+			where
+			labyrinthladderdate = (select labyrinthladderdate
+			from labyrinthladder
+			order by labyrinthladderdate desc
+			limit 1)
+			Limit 3;
+
+	</select>
+
+	<select id="previewselectele"
+		resultType="com.spring.poesub.model.PREAscendancy_Gem">
+			select row_number() over (order by gemcount desc) as num,
+			gemname, gemcount
+			from ascendancy_activegem_count_ele
+			where
+			labyrinthladderdate = (select labyrinthladderdate
+			from labyrinthladder
+			order by labyrinthladderdate desc
+			limit 1)
+			Limit 3;
+	</select>
+
+	<select id="previewselectgla"
+		resultType="com.spring.poesub.model.PREAscendancy_Gem">
+			select row_number() over (order by gemcount desc) as num,
+			gemname, gemcount
+			from ascendancy_activegem_count_gla
+			where
+			labyrinthladderdate = (select labyrinthladderdate
+			from labyrinthladder
+			order by labyrinthladderdate desc
+			limit 1)
+			Limit 3;
+	</select>
+
+	<select id="previewselectgua"
+		resultType="com.spring.poesub.model.PREAscendancy_Gem">
+			select row_number() over (order by gemcount desc) as num,
+			gemname, gemcount
+			from ascendancy_activegem_count_gua
+			where
+			labyrinthladderdate = (select labyrinthladderdate
+			from labyrinthladder
+			order by labyrinthladderdate desc
+			limit 1)
+			Limit 3;
+	</select>
+
+	<select id="previewselecthie"
+		resultType="com.spring.poesub.model.PREAscendancy_Gem">
+			select row_number() over (order by gemcount desc) as num,
+			gemname, gemcount
+			from ascendancy_activegem_count_hie
+			where
+			labyrinthladderdate = (select labyrinthladderdate
+			from labyrinthladder
+			order by labyrinthladderdate desc
+			limit 1)
+			Limit 3;
+	</select>
+
+	<select id="previewselectinq"
+		resultType="com.spring.poesub.model.PREAscendancy_Gem">
+			select row_number() over (order by gemcount desc) as num,
+			gemname, gemcount
+			from ascendancy_activegem_count_inq
+			where
+			labyrinthladderdate = (select labyrinthladderdate
+			from labyrinthladder
+			order by labyrinthladderdate desc
+			limit 1)
+			Limit 3;
+	</select>
+
+	<select id="previewselectjug"
+		resultType="com.spring.poesub.model.PREAscendancy_Gem">
+			select row_number() over (order by gemcount desc) as num,
+			gemname, gemcount
+			from ascendancy_activegem_count_jug
+			where
+			labyrinthladderdate = (select labyrinthladderdate
+			from labyrinthladder
+			order by labyrinthladderdate desc
+			limit 1)
+			Limit 3;
+	</select>
+
+	<select id="previewselectnec"
+		resultType="com.spring.poesub.model.PREAscendancy_Gem">
+			select row_number() over (order by gemcount desc) as num,
+			gemname, gemcount
+			from ascendancy_activegem_count_nec
+			where
+			labyrinthladderdate = (select labyrinthladderdate
+			from labyrinthladder
+			order by labyrinthladderdate desc
+			limit 1)
+			Limit 3;
+	</select>
+
+	<select id="previewselectocc"
+		resultType="com.spring.poesub.model.PREAscendancy_Gem">
+			select row_number() over (order by gemcount desc) as num,
+			gemname, gemcount
+			from ascendancy_activegem_count_occ
+			where
+			labyrinthladderdate = (select labyrinthladderdate
+			from labyrinthladder
+			order by labyrinthladderdate desc
+			limit 1)
+			Limit 3;
+	</select>
+
+	<select id="previewselectpat"
+		resultType="com.spring.poesub.model.PREAscendancy_Gem">
+			select row_number() over (order by gemcount desc) as num,
+			gemname, gemcount
+			from ascendancy_activegem_count_pat
+			where
+			labyrinthladderdate = (select labyrinthladderdate
+			from labyrinthladder
+			order by labyrinthladderdate desc
+			limit 1)
+			Limit 3;
+	</select>
+
+	<select id="previewselectrai"
+		resultType="com.spring.poesub.model.PREAscendancy_Gem">
+			select row_number() over (order by gemcount desc) as num,
+			gemname, gemcount
+			from ascendancy_activegem_count_rai
+			where
+			labyrinthladderdate = (select labyrinthladderdate
+			from labyrinthladder
+			order by labyrinthladderdate desc
+			limit 1)
+			Limit 3;
+	</select>
+
+	<select id="previewselectsab"
+		resultType="com.spring.poesub.model.PREAscendancy_Gem">
+			select row_number() over (order by gemcount desc) as num,
+			gemname, gemcount
+			from ascendancy_activegem_count_sab
+			where
+			labyrinthladderdate = (select labyrinthladderdate
+			from labyrinthladder
+			order by labyrinthladderdate desc
+			limit 1)
+			Limit 3;
+	</select>
+
+	<select id="previewselectsla"
+		resultType="com.spring.poesub.model.PREAscendancy_Gem">
+			select row_number() over (order by gemcount desc) as num,
+			gemname, gemcount
+			from ascendancy_activegem_count_sla
+			where
+			labyrinthladderdate = (select labyrinthladderdate
+			from labyrinthladder
+			order by labyrinthladderdate desc
+			limit 1)
+			Limit 3;
+	</select>
+
+	<select id="previewselecttri"
+		resultType="com.spring.poesub.model.PREAscendancy_Gem">
+			select row_number() over (order by gemcount desc) as num,
+			gemname, gemcount
+			from ascendancy_activegem_count_tri
+			where
+			labyrinthladderdate = (select labyrinthladderdate
+			from labyrinthladder
+			order by labyrinthladderdate desc
+			limit 1)
+			Limit 3;
+
+	</select>
+	<select id="labyrinthladderdata"
+		resultType="com.spring.poesub.model.Total">
+		select
+		labyrinthladderdate,total,ascendant,assasin,berserker,champion,chieftain,deadeye,elementalist,guardian,gladiator,hierophant,inquisitor,juggernaut,necromancer,occultist,raider,saboteur,slayer,trickster,pathfinder
+		from labyrinthladder
+		order by labyrinthladderdate desc
+		LIMIT 14;
+	</select>
+
+</mapper>

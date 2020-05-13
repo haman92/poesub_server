@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<script data-ad-client="ca-pub-2818057204957244" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>PoeSub</title>
+
+<!-- Bootstrap core CSS -->
+<link th:href="@{../vendor/bootstrap/css/bootstrap.min.css}"
+	rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link th:href="@{../css/simple-sidebar.css}" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+	<div class="d-flex" id="wrapper">
+		<!-- Sidebar -->
+		<div class="bg-light border-right" id="sidebar-wrapper">
+			<div class="sidebar-heading">POE SUB</div>
+			<div class="list-group list-group-flush">
+			
+				<a th:href="@{../}"
+					class="list-group-item list-group-item-action list-group-item-primary">Home</a>
+				<a th:href="@{../todaypreview}"
+					class="list-group-item list-group-item-action list-group-item-dark">today
+					preview</a> <a th:href="@{../ascendancy}"
+					class="list-group-item list-group-item-action list-group-item-primary">Ascendancy</a>
+				<a th:href="@{../chart}"
+					class="list-group-item list-group-item-action list-group-item-dark">Labyrinth
+					chart</a>
+
+			</div>
+		</div>
+		<!-- /#sidebar-wrapper -->
+
+
+		<!-- Page Content -->
+		<div id="page-content-wrapper" style="width: 100%">
+
+
+			<nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+						<li class="nav-item dropdown"><a
+							class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+							role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false"> Ascendant </a>
+							<div class="dropdown-menu dropdown-menu-right"
+								aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" th:href="@{Ascendant}">Ascendant</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item dropdown-menu-right" th:href="@{#}">==SHADOW==</a>
+								<a class="dropdown-item dropdown-menu-right"
+									th:href="@{Assasin}">Assasin</a> <a class="dropdown-item"
+									th:href="@{Saboteur}">Saboteur</a> <a class="dropdown-item"
+									th:href="@{Trickster}">Trickster</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" th:href="@{#}">==WITCH==</a> <a
+									class="dropdown-item" th:href="@{Elementalist}">Elementalist</a>
+								<a class="dropdown-item" th:href="@{Necromancer}">Necromancer</a>
+								<a class="dropdown-item" th:href="@{Occultist}">Occultist</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" th:href="@{#}">==RANGER==</a> <a
+									class="dropdown-item" th:href="@{Deadeye}">Deadeye</a> <a
+									class="dropdown-item" th:href="@{Pathfinder}">Pathfinder</a> <a
+									class="dropdown-item" th:href="@{Raider}">Raider</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" th:href="@{#}">==DUELIST==</a> <a
+									class="dropdown-item" th:href="@{Gladiator}">Gladiator</a> <a
+									class="dropdown-item" th:href="@{Champion}">Champion</a> <a
+									class="dropdown-item" th:href="@{Slayer}">Slayer</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" th:href="@{#}">==TEMPLAR==</a> <a
+									class="dropdown-item" th:href="@{Guardian}">Guardian</a> <a
+									class="dropdown-item" th:href="@{Hierophant}">Hierophant</a> <a
+									class="dropdown-item" th:href="@{Inquisitor}">Inquisitor</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" th:href="@{#}">==MARAUDER==</a> <a
+									class="dropdown-item" th:href="@{Juggernaut}">Juggernaut</a> <a
+									class="dropdown-item" th:href="@{Berserker}">Berserker</a> <a
+									class="dropdown-item" th:href="@{Chieftain}">Chieftain</a>
+								<div class="dropdown-divider"></div>
+							</div></li>
+
+						<li class="nav-item active"><a class="nav-link"
+							id="youtubesearchbutton" href="#">Youtube Search Link <span
+								class="sr-only">(current)</span></a></li>
+						<li class="nav-item active"><a class="nav-link"
+							id="youtubebutton" href="#">Youtube Link <span
+								class="sr-only">(current)</span></a></li>
+						<li class="nav-item active"><a class="nav-link"
+							id="youtubebutton1" href="#">Youtube Link <span
+								class="sr-only">(current)</span></a></li>
+						<li class="nav-item active"><a class="nav-link"
+							id="ninjabutton" href="#">Poe.ninja Link <span
+								class="sr-only">(current)</span></a></li>
+
+					</ul>
+
+				</div>
+			</nav>
+			<!-- /#page-content-wrapper -->
+
+			<div id="page-content-wrapper" style="width: 50%">
+
+				<!-- /# container fluid -->
+				<div class="container-fluid">
+
+					<table id="table1" class="table table-striped table-dark">
+
+						<thead>
+							<tr>
+								<th scope="col" style="width: 20%">rank</th>
+
+								<th scope="col" style="width: 60%">Active gems</th>
+								<th scope="col" style="width: 20%">count</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="data : ${asc}">
+								<td th:text="${data.num}">rank</td>
+								<td th:text="${data.gemname}">Active gems</td>
+								<td th:text="${data.sumgemcount}">count</td>
+						</tbody>
+					</table>
+
+
+
+					<div style="position: fixed; bottom: 1%; right: 33%">
+						<button id="topbutton" type="button" class="btn btn-primary"
+							th:onclick="topFunction()">to the Top</button>
+					</div>
+
+					<script th:inline="javascript">
+								var tbl = document.getElementById("table1");
+								var youtubebutton = document.getElementById("youtubebutton");
+								var youtubebutton1 = document.getElementById("youtubebutton1");
+								var youtubesearchbutton = document.getElementById("youtubesearchbutton");
+								var ninjabutton = document.getElementById("ninjabutton");
+
+						        if (tbl != null) {
+						            for (var i = 1; i < tbl.rows.length; i++) {
+						                    tbl.rows[i].cells[1].onclick = function () { getval(this); }
+						            }
+						        }
+						        function getval(cel) {
+						            youtubebutton.href = "youtuberedirect?ascendancyname=Ascendant&gemname="+cel.innerHTML
+						           	youtubebutton.innerHTML = cel.innerHTML +" YOUTUBE"
+						           	youtubebutton1.href = "youtuberedirect1?ascendancyname=Ascendant&gemname="+cel.innerHTML
+						           	youtubebutton1.innerHTML = cel.innerHTML +" YOUTUBE SECOND"
+						           	ninjabutton.href = "ninjaredirect?ascendancyname=Ascendant&gemname="+cel.innerHTML
+						           	ninjabutton.innerHTML ="Ascendant "+ cel.innerHTML + " ninja"
+						           	youtubesearchbutton.href="youtubesearchredirect?ascendancyname=Ascendant&gemname="+cel.innerHTML
+						           	youtubesearchbutton.innerHTML = cel.innerHTML +" YOUTUBESEARCH"
+						        }
+						        mybutton = document.getElementById("topbutton");
+
+						     	
+							     
+
+							     // When the user clicks on the button, scroll to the top of the document
+							     function topFunction() {
+							       document.body.scrollTop = 0; // For Safari
+							       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+							     }
+						</script>
+
+				</div>
+			</div>
+			
+
+
+		</div>
+	</div>
+
+
+	<!-- /#wrapper -->
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="../vendor/jquery/jquery.min.js"></script>
+	<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

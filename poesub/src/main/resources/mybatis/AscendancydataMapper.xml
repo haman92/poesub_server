@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring.poesub.db.AscendancydataMapper">
+	
+	
+	<select id="ascendancyselectasc"
+		resultType="com.spring.poesub.model.Ascendancy_Gem">
+				select row_number() over (order by sum(gemcount) desc) as num , gemname, sum(gemcount) as sumgemcount
+			from ascendancy_activegem_count_asc
+			where  labyrinthladderdate between ( (select max(labyrinthladderdate)
+			from labyrinthladder)- INTERVAL 7 DAY)  and(select max(labyrinthladderdate)
+			from labyrinthladder)
+            group by gemname
+            order by sum(gemcount) desc;
+	</select>
+	<select id="ascendancyselectass"
+		resultType="com.spring.poesub.model.Ascendancy_Gem">
+				select row_number() over (order by sum(gemcount) desc) as num , gemname, sum(gemcount) as sumgemcount
+			from ascendancy_activegem_count_ass
+			where  labyrinthladderdate between ( (select max(labyrinthladderdate)
+			from labyrinthladder)- INTERVAL 7 DAY)  and(select max(labyrinthladderdate)
+			from labyrinthladder)
+            group by gemname
+            order by sum(gemcount) desc;
+	</select>
+	<select id="ascendancyselectber"
+		resultType="com.spring.poesub.model.Ascendancy_Gem">
+				select row_number() over (order by sum(gemcount) desc) as num , gemname, sum(gemcount) as sumgemcount
+			from ascendancy_activegem_count_ber
+			where  labyrinthladderdate between ( (select max(labyrinthladderdate)
+			from labyrinthladder)- INTERVAL 7 DAY)  and(select max(labyrinthladderdate)
+			from labyrinthladder)
+            group by gemname
+            order by sum(gemcount) desc;
+	</select>
+	<select id="ascendancyselectcha"
+		resultType="com.spring.poesub.model.Ascendancy_Gem">
+				select row_number() over (order by sum(gemcount) desc) as num , gemname, sum(gemcount) as sumgemcount
+			from ascendancy_activegem_count_cha
+			where  labyrinthladderdate between ( (select max(labyrinthladderdate)
+			from labyrinthladder)- INTERVAL 7 DAY)  and(select max(labyrinthladderdate)
+			from labyrinthladder)
+            group by gemname
+            order by sum(gemcount) desc;
+	</select>
+	<select id="ascendancyselectchi"
+		resultType="com.spring.poesub.model.Ascendancy_Gem">
+				select row_number() over (order by sum(gemcount) desc) as num , gemname, sum(gemcount) as sumgemcount
+			from ascendancy_activegem_count_chi
+			where  labyrinthladderdate between ( (select max(labyrinthladderdate)
+			from labyrinthladder)- INTERVAL 7 DAY)  and(select max(labyrinthladderdate)
+			from labyrinthladder)
+            group by gemname
+            order by sum(gemcount) desc;
+	</select>
+	<select id="ascendancyselectdea"
+		resultType="com.spring.poesub.model.Ascendancy_Gem">
+				select row_number() over (order by sum(gemcount) desc) as num , gemname, sum(gemcount) as sumgemcount
+			from ascendancy_activegem_count_dea
+			where  labyrinthladderdate between ( (select max(labyrinthladderdate)
+			from labyrinthladder)- INTERVAL 7 DAY)  and(select max(labyrinthladderdate)
+			from labyrinthladder)
+            group by gemname
+            order by sum(gemcount) desc;
+	</select>
+	<select id="ascendancyselectele"
+		resultType="com.spring.poesub.model.Ascendancy_Gem">
+				select row_number() over (order by sum(gemcount) desc) as num , gemname, sum(gemcount) as sumgemcount
+			from ascendancy_activegem_count_ele
+			where  labyrinthladderdate between ( (select max(labyrinthladderdate)
+			from labyrinthladder)- INTERVAL 7 DAY)  and(select max(labyrinthladderdate)
+			from labyrinthladder)
+            group by gemname
+            order by sum(gemcount) desc;
+	</select>
+	<select id="ascendancyselectgla"
+		resultType="com.spring.poesub.model.Ascendancy_Gem">
+				select row_number() over (order by sum(gemcount) desc) as num , gemname, sum(gemcount) as sumgemcount
+			from ascendancy_activegem_count_gla
+			where  labyrinthladderdate between ( (select max(labyrinthladderdate)
+			from labyrinthladder)- INTERVAL 7 DAY)  and(select max(labyrinthladderdate)
+			from labyrinthladder)
+            group by gemname
+            order by sum(gemcount) desc;
+	</select>
+	<select id="ascendancyselectgua"
+		resultType="com.spring.poesub.model.Ascendancy_Gem">
+				select row_number() over (order by sum(gemcount) desc) as num , gemname, sum(gemcount) as sumgemcount
+			from ascendancy_activegem_count_gua
+			where  labyrinthladderdate between ( (select max(labyrinthladderdate)
+			from labyrinthladder)- INTERVAL 7 DAY)  and(select max(labyrinthladderdate)
+			from labyrinthladder)
+            group by gemname
+            order by sum(gemcount) desc;
+	</select>
+	<select id="ascendancyselecthie"
+		resultType="com.spring.poesub.model.Ascendancy_Gem">
+				select row_number() over (order by sum(gemcount) desc) as num , gemname, sum(gemcount) as sumgemcount
+			from ascendancy_activegem_count_hie
+			where  labyrinthladderdate between ( (select max(labyrinthladderdate)
+			from labyrinthladder)- INTERVAL 7 DAY)  and(select max(labyrinthladderdate)
+			from labyrinthladder)
+            group by gemname
+            order by sum(gemcount) desc;
+	</select>
+	<select id="ascendancyselectinq"
+		resultType="com.spring.poesub.model.Ascendancy_Gem">
+				select row_number() over (order by sum(gemcount) desc) as num , gemname, sum(gemcount) as sumgemcount
+			from ascendancy_activegem_count_inq
+			where  labyrinthladderdate between ( (select max(labyrinthladderdate)
+			from labyrinthladder)- INTERVAL 7 DAY)  and(select max(labyrinthladderdate)
+			from labyrinthladder)
+            group by gemname
+            order by sum(gemcount) desc;
+	</select>
+	<select id="ascendancyselectjug"
+		resultType="com.spring.poesub.model.Ascendancy_Gem">
+				select row_number() over (order by sum(gemcount) desc) as num , gemname, sum(gemcount) as sumgemcount
+			from ascendancy_activegem_count_jug
+			where  labyrinthladderdate between ( (select max(labyrinthladderdate)
+			from labyrinthladder)- INTERVAL 7 DAY)  and(select max(labyrinthladderdate)
+			from labyrinthladder)
+            group by gemname
+            order by sum(gemcount) desc;
+	</select>
+	<select id="ascendancyselectnec"
+		resultType="com.spring.poesub.model.Ascendancy_Gem">
+				select row_number() over (order by sum(gemcount) desc) as num , gemname, sum(gemcount) as sumgemcount
+			from ascendancy_activegem_count_nec
+			where  labyrinthladderdate between ( (select max(labyrinthladderdate)
+			from labyrinthladder)- INTERVAL 7 DAY)  and(select max(labyrinthladderdate)
+			from labyrinthladder)
+            group by gemname
+            order by sum(gemcount) desc;
+	</select>
+	<select id="ascendancyselectocc"
+		resultType="com.spring.poesub.model.Ascendancy_Gem">
+				select row_number() over (order by sum(gemcount) desc) as num , gemname, sum(gemcount) as sumgemcount
+			from ascendancy_activegem_count_occ
+			where  labyrinthladderdate between ( (select max(labyrinthladderdate)
+			from labyrinthladder)- INTERVAL 7 DAY)  and(select max(labyrinthladderdate)
+			from labyrinthladder)
+            group by gemname
+            order by sum(gemcount) desc;
+	</select>
+	<select id="ascendancyselectpat"
+		resultType="com.spring.poesub.model.Ascendancy_Gem">
+				select row_number() over (order by sum(gemcount) desc) as num , gemname, sum(gemcount) as sumgemcount
+			from ascendancy_activegem_count_pat
+			where  labyrinthladderdate between ( (select max(labyrinthladderdate)
+			from labyrinthladder)- INTERVAL 7 DAY)  and(select max(labyrinthladderdate)
+			from labyrinthladder)
+            group by gemname
+            order by sum(gemcount) desc;
+	</select>
+	<select id="ascendancyselectrai"
+		resultType="com.spring.poesub.model.Ascendancy_Gem">
+				select row_number() over (order by sum(gemcount) desc) as num , gemname, sum(gemcount) as sumgemcount
+			from ascendancy_activegem_count_rai
+			where  labyrinthladderdate between ( (select max(labyrinthladderdate)
+			from labyrinthladder)- INTERVAL 7 DAY)  and(select max(labyrinthladderdate)
+			from labyrinthladder)
+            group by gemname
+            order by sum(gemcount) desc;
+	</select>
+	<select id="ascendancyselectsab"
+		resultType="com.spring.poesub.model.Ascendancy_Gem">
+				select row_number() over (order by sum(gemcount) desc) as num , gemname, sum(gemcount) as sumgemcount
+			from ascendancy_activegem_count_sab
+			where  labyrinthladderdate between ( (select max(labyrinthladderdate)
+			from labyrinthladder)- INTERVAL 7 DAY)  and(select max(labyrinthladderdate)
+			from labyrinthladder)
+            group by gemname
+            order by sum(gemcount) desc;
+	</select>
+	<select id="ascendancyselectsla"
+		resultType="com.spring.poesub.model.Ascendancy_Gem">
+				select row_number() over (order by sum(gemcount) desc) as num , gemname, sum(gemcount) as sumgemcount
+			from ascendancy_activegem_count_sla
+			where  labyrinthladderdate between ( (select max(labyrinthladderdate)
+			from labyrinthladder)- INTERVAL 7 DAY)  and(select max(labyrinthladderdate)
+			from labyrinthladder)
+            group by gemname
+            order by sum(gemcount) desc;
+	</select>
+	<select id="ascendancyselecttri"
+		resultType="com.spring.poesub.model.Ascendancy_Gem">
+				select row_number() over (order by sum(gemcount) desc) as num , gemname, sum(gemcount) as sumgemcount
+			from ascendancy_activegem_count_tri
+			where  labyrinthladderdate between ( (select max(labyrinthladderdate)
+			from labyrinthladder)- INTERVAL 7 DAY)  and(select max(labyrinthladderdate)
+			from labyrinthladder)
+            group by gemname
+            order by sum(gemcount) desc;
+	</select>
+	
+
+</mapper>
